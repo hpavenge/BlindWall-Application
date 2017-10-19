@@ -1,0 +1,10 @@
+<p>Walls</p>
+
+<ul>
+  <li *ngFor="let wall of walls"
+      [class.selected]="wall === selectedWall"
+    (click)="onSelect(wall)">
+    <p>{{wall.address}}</p>
+  </li>
+</ul>
+<app-wall-detail></app-wall-detail>

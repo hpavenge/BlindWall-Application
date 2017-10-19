@@ -6,11 +6,15 @@ import { HttpModule  } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
+import {WallComponent} from './wall.component';
+import {WallDetailComponent} from './wall-detail.component';
 import { MuralService } from './mural.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WallComponent,
+    WallDetailComponent
   ],
   imports: [
     BrowserModule,

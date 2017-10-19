@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response} from '@angular/http';
 import { MuralService } from './mural.service';
 import { Wall } from './Models/Wall';
 
@@ -10,7 +9,7 @@ import 'rxjs/add/operator/map';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'app';
   data: any = {};
   murals: Array<Wall[]>;
