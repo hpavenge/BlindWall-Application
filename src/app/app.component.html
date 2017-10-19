@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <app-wall></app-wall>
 </div>
 
@@ -7,4 +7,9 @@
   <ng-container *ngFor="let mural of murals">
 <h2>{{mural.id}}</h2>
   </ng-container>
-</div>
+</div> -->
+<h1>{{title}}</h1>
+    <nav>
+      <a routerLink="/walls" routerLinkActive="active">Walls</a>
+    </nav>
+    <router-outlet></router-outlet>

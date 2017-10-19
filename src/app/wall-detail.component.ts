@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import {Wall} from './Models/Wall';
 
 @Component({
@@ -7,8 +8,14 @@ import {Wall} from './Models/Wall';
   styleUrls: ['./wall-detail.component.css']
 })
 
-export class WallDetailComponent {
+export class WallDetailComponent implements OnInit{
   @Input() wall: Wall;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    // get api call single wall
+ }
 
   goBack(): void {
 
