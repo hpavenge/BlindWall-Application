@@ -10,6 +10,7 @@ export class Wall {
   address: string;
   year: number;
   photographer: string;
+  author: string;
   title: Title;
   description: Description;
   material: Material;
