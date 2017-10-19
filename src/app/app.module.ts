@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule  } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module'
+import { AgmCoreModule } from '@agm/core'
 // import { NgbModule } from '@ng-boostrap/ng-boostrap';
 
 
@@ -21,7 +22,10 @@ import { MuralService } from './mural.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDdpG7mQETYlJ84Stz-ke5HQcQR4fPy_oM'
+    })
   ],
   providers: [MuralService],
   bootstrap: [AppComponent]
