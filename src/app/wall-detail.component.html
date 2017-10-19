@@ -1,3 +1,14 @@
+<div *ngIf="mural" class="container">
+  <p>Naam: {{mural.title.en}}</p>
+  <p>Auteur: {{mural.author}}</p>
+  <p>Jaar: {{mural.year}}</p>
+  <p>Informatie over deze muur: {{mural.description.nl}}</p>
+  <p>Materiaal: {{mural.material.nl}}</p>
+  <div class="row">
+    <div *ngFor="let image of mural.images" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+      <img class="img-responsive" src="https://api.blindwalls.gallery/{{image.url}}" width="300px" alt="">
+    </div>
+  </div>
 <div *ngIf="mural">
   <p>Name: {{mural.title.en}}</p>
   <agm-map [latitude]="lat" [longitude]="lng">
