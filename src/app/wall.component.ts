@@ -17,6 +17,10 @@ export class WallComponent implements OnInit {
   constructor(private muralService: MuralService, private router: Router) {}
 
   getWalls(): void {
+    // this.muralService.getMurals().subscribe(data => {
+    //   // this.data = data;
+    //   this.murals = data;
+    // });
     this.muralService.getMurals().subscribe(data => {
       // this.data = data;
       this.murals = data;

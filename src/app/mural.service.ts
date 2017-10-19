@@ -14,6 +14,8 @@ export class MuralService{
     return this.http.get(this.apiUrl).map((res: Response) => res.json())
   }
 
+
+
   // getMurals(){
   //   this.getData().subscribe(data => {
   //         console.log(data);
