@@ -9,7 +9,7 @@ import {Wall} from './Models/Wall';
 })
 
 export class WallDetailComponent implements OnInit{
-  @Input() wall: Wall;
+  @Input() mural: Wall;
 
   constructor(private route: ActivatedRoute) {}
 

@@ -1,3 +1,8 @@
+import {Title} from './Title';
+import {Description} from './Description';
+import {Image} from './Image';
+import {Material} from './Material';
+
 export class Wall {
   id: number;
   date: number;
@@ -5,4 +10,8 @@ export class Wall {
   address: string;
   year: number;
   photographer: string;
+  title: Title;
+  description: Description;
+  material: Material;
+  images: Array<Image>;
 }

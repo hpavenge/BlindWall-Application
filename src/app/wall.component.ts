@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { Router }            from '@angular/router';
+import { Router }          from '@angular/router';
 import {Wall} from './Models/Wall';
-import {WALLS} from './mock-walls';
+import {MuralService} from './mural.service';
 
 
 @Component({
@@ -11,13 +11,16 @@ import {WALLS} from './mock-walls';
 })
 
 export class WallComponent implements OnInit {
-  walls = WALLS;
+  murals: Array<Wall[]>;
   selectedWall: Wall;
 
-  constructor(private router: Router) {}
+  constructor(private muralService: MuralService, private router: Router) {}
 
   getWalls(): void {
-    this.walls = WALLS;
+    this.muralService.getMurals().subscribe(data => {
+      // this.data = data;
+      this.murals = data;
+    });
   }
 
   ngOnInit(): void {

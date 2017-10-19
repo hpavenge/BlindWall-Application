@@ -1,10 +1,17 @@
 <p>Walls</p>
 
-<ul>
-  <li *ngFor="let wall of walls"
-      [class.selected]="wall === selectedWall"
-    (click)="onSelect(wall)">
-    <p>{{wall.address}}</p>
-  </li>
-</ul>
-<app-wall-detail></app-wall-detail>
+<!--<ul>-->
+  <!--<li *ngFor="let mural of murals"-->
+      <!--[class.selected]="mural === selectedWall"-->
+    <!--(click)="onSelect(mural)">-->
+    <!--<p>{{mural.id}}</p>-->
+  <!--</li>-->
+<!--</ul>-->
+<div>
+  <p *ngFor="let mural of murals"
+      [class.selected]="mural === selectedWall"
+      (click)="onSelect(mural)">
+    <span>{{mural.id}}</span>
+  </p>
+</div>
+<app-wall-detail [mural]="selectedWall"></app-wall-detail>
