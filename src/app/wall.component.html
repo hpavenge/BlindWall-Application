@@ -14,12 +14,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4" *ngFor="let mural of murals">
+    <div (click)="goToDetail(mural)" class="col-md-4" *ngFor="let mural of murals">
       <div class="img-thumbnail">
         <img class="img-fluid" src="https://api.blindwalls.gallery/{{mural.images[0].url}}" alt="">
         <div class="caption">
           <h4 class="pull-right"></h4>
-          <h4 (click)="goToDetail(mural)"><a>{{mural.title.nl}}</a></h4>
+          <h4><a>{{mural.title.nl}}</a></h4>
           <p>Door: {{mural.author}}</p>
         </div>
       </div>
