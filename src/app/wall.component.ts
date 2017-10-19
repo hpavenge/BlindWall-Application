@@ -31,12 +31,8 @@ export class WallComponent implements OnInit {
     this.getWalls();
   }
 
-  onSelect(wall: Wall): void {
-    this.selectedWall = wall;
-  }
-
-  goToDetail(): void {
-
+  goToDetail(wall: Wall): void {
+    this.router.navigate(['/detail', wall.id]);
   }
 
 }

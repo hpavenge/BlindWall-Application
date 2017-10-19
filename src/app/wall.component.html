@@ -7,11 +7,7 @@
     <!--<p>{{mural.id}}</p>-->
   <!--</li>-->
 <!--</ul>-->
-<div>
-  <p *ngFor="let mural of murals"
-      [class.selected]="mural === selectedWall"
-      (click)="onSelect(mural)">
-    <span>{{mural.id}}</span>
-  </p>
+<div *ngFor="let mural of murals">
+  <p>{{mural.id}}: {{mural.title.nl}}</p>
+  <button (click)="goToDetail(mural)">Ga naar muur</button>
 </div>
-<app-wall-detail [mural]="selectedWall"></app-wall-detail>
