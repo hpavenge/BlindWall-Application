@@ -6,11 +6,9 @@
   <p>Materiaal: {{mural.material.nl}}</p>
   <div class="row">
     <div *ngFor="let image of mural.images" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-      <img class="img-responsive" src="https://api.blindwalls.gallery/{{image.url}}" width="300px" alt="">
+      <img class="img-responsive" src="https://api.blindwalls.gallery/{{image.file}}" width="300px" alt="">
     </div>
   </div>
-<div *ngIf="mural">
-  <p>Name: {{mural.title.en}}</p>
   <agm-map [zoom]=13 [latitude]="mural.latitude" [longitude]="mural.longitude">
     <agm-marker [latitude]="mural.latitude" [longitude]="mural.longitude"></agm-marker>
   </agm-map>
