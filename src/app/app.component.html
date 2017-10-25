@@ -8,3 +8,8 @@
       <a routerLink="/walls" routerLinkActive="active">Walls</a>
     </nav>
     <router-outlet></router-outlet>
+    <button (click)="reset()">Reset count</button>
+    <div>
+           count from Counter: {{count}}
+    </div>
+    <counter-comp [parentCount]="count" (change)="updateFromChild($event)"></counter-comp>

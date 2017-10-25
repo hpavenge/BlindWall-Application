@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 import {WallComponent} from './wall.component';
 import {WallDetailComponent} from './wall-detail.component';
 import { MuralService } from './mural.service';
+import { CounterComponent } from './counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WallComponent,
-    WallDetailComponent
+    WallDetailComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
